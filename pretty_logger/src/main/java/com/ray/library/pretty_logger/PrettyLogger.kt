@@ -26,54 +26,67 @@ class PrettyLogger {
 
         private val printers = ConcurrentHashMap<Int, Printer>()
 
+        @JvmStatic
         fun add(priority: Int, printer: Printer) {
             printers.put(priority, printer)
         }
 
+        @JvmStatic
         fun v(tag: String, message: String) {
             v(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun v(tag: String, message: String, priority: Int) {
             log(priority, VERBOSE, tag, message)
         }
 
+        @JvmStatic
         fun d(tag: String, message: String) {
             d(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun d(tag: String, message: String, priority: Int) {
             log(priority, DEBUG, tag, message)
         }
 
+        @JvmStatic
         fun i(tag: String, message: String) {
             i(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun i(tag: String, message: String, priority: Int) {
             log(priority, INFO, tag, message)
         }
 
+        @JvmStatic
         fun w(tag: String, message: String) {
             w(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun w(tag: String, message: String, priority: Int) {
             log(priority, WARN, tag, message)
         }
 
+        @JvmStatic
         fun e(tag: String, message: String) {
             e(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun e(tag: String, message: String, priority: Int) {
             log(priority, ERROR, tag, message)
         }
 
+        @JvmStatic
         fun wtf(tag: String, message: String) {
             wtf(tag, message, HIGH_PRIORITY)
         }
 
+        @JvmStatic
         fun wtf(tag: String, message: String, priority: Int) {
             log(priority, WTF, tag, message)
         }
